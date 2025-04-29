@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Z MUSIC WORLD </title>
+<style type="text/css">
+<!--
+body,td,th {
+	color: #000000;
+}
+body {
+	background-color: #00FFFF;
+}
+a:link {
+	text-decoration: none;
+	color: #FF0000;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+-->
+</style></head>
+
+<body>
+<form action="process_login.php" method="post">
+<label for="usuername">username:</label>
+<div align="center"></div>
+<div align="left">
+  <input type="text" id="username" name="username" required />
+  <br>
+    <br>
+  </div>
+    <label for="password">password:</label>
+<input type="password" id="password" name="password" required ><br><br>
+<input type="submit"value="login" />
+</form>
+<div class="container center">
+<h1>welcome to my membership website!</h1>
+<link href="css/global.css"rel="stylesheet"type="text/css"/>
+</div>
+<div align="center">
+  <p>&nbsp;</p>
+  <p>Z MUSIC WORLD</p>
+  <p><strong><a href="HOME.INDEX.HTML">ALL </a><a href="MUSIC.HTML">MUSIC</a> <a href="PODCAST.HTML">PODCAST </a><a href="ABOUT.HTML">ABOUT</a></strong><a href="ROYALTIES.HTML"></a></p>
+</div>
+
+<form action="your-upload-script.php" method="post" enctype="multipart/form-data"><input type="file" name="files[]" multiple />
+</form>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+
+<p align="left">&nbsp;</p>
+
+<div id="paypal-button-container-P-5VY32084FR5701131NAGW4QQ"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=ARyuYLqMZGamP1Y7COpploMBpDqc7uqn67W0qWaclKoPghEed1FHQgkejuunIVX5d7rVmOsI2N2f7qmK&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-5VY32084FR5701131NAGW4QQ'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-5VY32084FR5701131NAGW4QQ'); // Renders the PayPal button
+</script>
+</html>
